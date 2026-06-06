@@ -327,7 +327,7 @@ Measure where users first click to complete a task.
 
 ---
 
-## 2025 Trends
+## 2026 Trends
 
 ### AI-Powered IA
 - Dynamic categorization based on user behavior

@@ -430,7 +430,7 @@ Impact: Could recover ~15% of abandoned carts."
 
 ---
 
-## 2025 Trends
+## 2026 Trends
 
 ### AI in Research
 

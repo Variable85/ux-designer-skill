@@ -1,11 +1,11 @@
 ---
 name: ux-designer
-description: Apply modern UX best practices when designing and reviewing interfaces. Use for UI/UX design, accessibility, usability, interaction design, user research, and frontend code review.
+description: Applies modern UX/UI best practices to interface design and review. Use for UI design and critique; accessibility audits (WCAG, EAA); microcopy; forms, navigation, and onboarding; internationalization and RTL; voice, multimodal, and AI interfaces; design systems; and frontend code review.
 ---
 
 # UX Designer Skill
 
-You are a UX design expert with comprehensive knowledge of modern user experience best practices (2025). Apply these principles when designing or reviewing interfaces.
+You are a UX design expert with comprehensive knowledge of modern user experience best practices (2026). Apply these principles when designing or reviewing interfaces.
 
 ## When to Apply This Skill
 
@@ -28,6 +28,8 @@ Use this skill when:
 - Building dashboards, data visualizations, and analytics interfaces
 - Implementing search interfaces with autocomplete and filtering
 - Applying emotional design principles and building user trust
+- Internationalizing/localizing UI or adding right-to-left (RTL) language support
+- Designing voice, multimodal, or cross-device input experiences
 
 ## Core Design Philosophy
 
@@ -37,6 +39,18 @@ Use this skill when:
 3. **Provide feedback** - Every action should have a visible response
 4. **Maintain consistency** - Follow established patterns users expect
 5. **Design for accessibility** - Include all users from the start
+
+### Calm & Clarity Over Complexity (2026)
+- **Cognitive clarity over sensory richness** - Calm, legible interfaces beat busy,
+  flashy ones. Motion, color, and density should earn their place by aiding
+  understanding, not by impressing.
+- **AI as a respectful copilot, not an autopilot** - Offer AI assistance optionally
+  (sidebars, overlays, suggestions); keep the user in control and every AI action
+  reversible and transparent. See [references/14-ai-ux-patterns.md](references/14-ai-ux-patterns.md).
+- **Responsible adaptation over hyper-personalization** - Adapt to genuine user
+  needs and context; avoid manipulative or opaque personalization.
+- **Depth and judgment over polish** - As UI becomes a commodity, the value is in
+  research, correctness, and knowing when *not* to add something.
 
 ### The UX Hierarchy of Needs
 1. **Functional** - Does it work?
@@ -124,6 +138,13 @@ Use this skill when:
 - [ ] Cancellation is as easy as subscription
 - [ ] No confirmshaming in decline copy
 
+### Internationalization
+- [ ] RTL-ready (logical CSS properties, layout verified in `dir="rtl"`)
+- [ ] Tolerant of ~30-40% text expansion (no fixed-width labels/buttons)
+- [ ] No text baked into images; all strings externalized
+- [ ] Locale-aware date/number/currency formatting (`Intl`); ICU plurals
+- [ ] Language switcher uses endonyms, not flags
+
 ## Decision Trees
 
 ### Modal vs. Side Panel vs. Full Page
@@ -195,6 +216,8 @@ What needs the user's attention?
 - For emotional design and trust-building patterns, see [references/20-emotional-design.md](references/20-emotional-design.md)
 - For data tables, sortable lists, pagination, and bulk actions, see [references/21-data-tables.md](references/21-data-tables.md)
 - For loading states, skeleton screens, optimistic updates, and perceived performance, see [references/22-performance-ux.md](references/22-performance-ux.md)
+- For internationalization, localization, and RTL design, see [references/23-internationalization.md](references/23-internationalization.md)
+- For voice, multimodal, and cross-device input patterns, see [references/24-voice-and-multimodal.md](references/24-voice-and-multimodal.md)
 
 ## Key Numbers to Remember
 
@@ -209,6 +232,7 @@ What needs the user's attention?
 | Contrast ratio | 4.5:1 | WCAG AA for normal text |
 | Contrast ratio | 3:1 | WCAG AA for large text |
 | Working memory | 7±2 items | Miller's Law |
+| Text expansion | ~30-40% | Translation growth (DE/FI/RU) |
 
 ### Interaction & Animation
 
@@ -272,6 +296,8 @@ What needs the user's attention?
 21. **Mandatory lengthy tours** - Forcing users through 10+ onboarding steps → see [16-onboarding.md](references/16-onboarding.md)
 22. **Notification carpet bombing** - Every event as a push notification → see [17-notifications.md](references/17-notifications.md)
 23. **Permission on first visit** - Asking for push permission before user sees value → see [17-notifications.md](references/17-notifications.md)
+24. **Hardcoded/untranslatable strings** - Text baked into code/images, fixed-width containers, LTR-only layout → see [23-internationalization.md](references/23-internationalization.md)
+25. **Voice-only flows / hidden mic** - No fallback modality, no recognition feedback, buried voice entry → see [24-voice-and-multimodal.md](references/24-voice-and-multimodal.md)
 
 ## Sources
 
@@ -289,6 +315,8 @@ This skill synthesizes best practices from:
 - [Microsoft HAX Toolkit](https://www.microsoft.com/en-us/haxtoolkit/) - Human-AI interaction
 - [Deceptive Design](https://www.deceptive.design/) - Dark pattern catalog
 - [EU Digital Services Act](https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package) - Platform regulation
+- [EU Accessibility Act](https://ec.europa.eu/social/main.jsp?catId=1202) - EN 301 549 / WCAG 2.1 AA mandate
+- [W3C Internationalization (i18n) Activity](https://www.w3.org/International/) - i18n/l10n standards
 - [Baymard Institute](https://baymard.com/) - E-commerce UX research
 - [Edward Tufte](https://www.edwardtufte.com/) - Data visualization
 - [ColorBrewer](https://colorbrewer2.org/) - Colorblind-safe palettes

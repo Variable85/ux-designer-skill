@@ -415,27 +415,45 @@ if ('vibrate' in navigator) {
 
 ---
 
-## 2025 Trends
+## 2026 Trends
+
+### Functional Motion (motion earns its keep)
+The dominant 2026 framing: motion should **guide, not flash**. Every animation must
+do a job—orient the user, show cause and effect, or maintain spatial continuity—
+otherwise it's decoration that adds cognitive load. Reserve flourish for moments
+that matter (success, first-run delight); keep everyday transitions calm and quick.
+
+- Use motion to **explain state change** (where did this come from / go to?)
+- Use motion to **direct attention** to what just changed
+- Use motion to **preserve context** across views (shared-element transitions)
+- Cut motion that exists only to look impressive—calm interfaces win in 2026
+
+### Giving Users Control Over Motion
+`prefers-reduced-motion` (see [Reduced Motion](#reduced-motion) above) is the
+baseline, but it's an OS-level all-or-nothing switch many users never set. Mature
+products add an **explicit in-product "Reduce motion" toggle** in settings so users
+can dial motion down without touching system preferences.
+
+```
+Settings → Accessibility → Motion
+  ○ Full motion (default)
+  ● Reduced motion   ← respects this even if OS pref is unset
+  ○ Off
+```
+
+- Default to the OS preference, then let the in-app setting override it
+- Persist the choice per user/device; apply it everywhere, not just key screens
+- Treat "reduced" as *reduced* (instant fades) not *broken* (no feedback at all)
 
 ### AI-Driven Interactions
-- Predictive UI that anticipates needs
+- Predictive UI that anticipates needs (offered, never forced)
 - Personalized micro-interactions
-- Adaptive animation complexity
+- Adaptive animation complexity tuned to device performance
 
-### Voice + Visual
+### Voice + Multimodal
 - Multimodal feedback (voice confirms visual action)
-- Voice-triggered animations
-- Conversational UI patterns
-
-### Spatial Computing
-- 3D interactions for AR/VR
-- Depth-based feedback
-- Hand tracking gestures
-
-### Hyper-Personalization
-- User-preferred animation speeds
-- Customizable feedback intensity
-- Learned interaction patterns
+- Combining voice, touch, pointer, and keyboard input
+- See [24-voice-and-multimodal.md](24-voice-and-multimodal.md) for depth
 
 ---
 

@@ -1,6 +1,6 @@
 # Mobile UX Design
 
-Mobile-first design is essential in 2025, with over 60% of web traffic coming from mobile devices.
+Mobile-first design is essential in 2026, with over 60% of web traffic coming from mobile devices.
 
 ---
 

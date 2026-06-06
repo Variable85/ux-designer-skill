@@ -331,13 +331,29 @@ Standard expectations:
 
 ## Legal Requirements
 
+Accessibility is now a hard legal obligation in major markets, not just a best
+practice. The headline change is the European Accessibility Act.
+
 ### European Accessibility Act (EAA)
-- **Effective:** June 28, 2025
-- **Applies to:** Products/services sold in EU
-- **Standard:** EN 301 549 (based on WCAG 2.1 AA)
+- **In force since:** June 28, 2025 — enforcement is active now
+- **Applies to:** A broad set of digital products and services sold in the EU —
+  e-commerce, banking, e-books, ticketing, transport, electronic communications,
+  and consumer hardware/OS. **Reach is extraterritorial:** non-EU businesses
+  (incl. US/UK companies) that sell to EU customers must comply.
+- **Technical baseline:** **EN 301 549**, the harmonized EU standard, which
+  references **WCAG 2.1 Level AA** as its web/app floor (and adds requirements
+  beyond WCAG, e.g. for hardware and documentation).
+- **Transition end:** June 28, 2030 — a limited grace window for certain
+  pre-existing service contracts and self-service terminals already in use.
+- **Practical takeaway:** Targeting **WCAG 2.2 AA** (covered above) meets and
+  exceeds the EAA's WCAG 2.1 AA floor, so a WCAG 2.2 AA product is well-positioned
+  for compliance. Verify the EN 301 549 non-web clauses if you ship hardware,
+  documents, or support channels.
 
 ### Other Regulations
-- **US:** ADA, Section 508
+- **US:** ADA (case law increasingly treats websites as places of public
+  accommodation), Section 508 (federal procurement, aligned to WCAG 2.0 AA)
+- **EU:** Web Accessibility Directive (public-sector sites/apps, EN 301 549)
 - **UK:** Equality Act 2010
 - **Canada:** AODA, ACA
 - **Australia:** DDA
@@ -370,6 +386,8 @@ Standard expectations:
 
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
 - [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/)
+- [European Accessibility Act](https://ec.europa.eu/social/main.jsp?catId=1202) - EU directive 2019/882
+- [EN 301 549](https://www.etsi.org/standards) - Harmonized EU accessibility standard
 - [WebAIM](https://webaim.org/)
 - [A11y Project](https://www.a11yproject.com/)
 - [Deque University](https://dequeuniversity.com/)

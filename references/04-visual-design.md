@@ -369,7 +369,7 @@ body {
 
 ---
 
-## 2025 Trends
+## 2026 Trends
 
 ### AI-Adaptive Interfaces
 - Colors and layouts that adjust based on user behavior

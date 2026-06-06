@@ -4,6 +4,39 @@ AI-powered interfaces are now mainstream but have unique UX challenges. This ref
 
 ---
 
+## AI as a Respectful Copilot, Not an Autopilot
+
+The defining 2026 framing (NN/g *State of UX 2026* and broad trend consensus): the
+best AI features are a **respectful copilot**—present and helpful, but optional and
+under user control—rather than an **autopilot** that hijacks the flow. As raw UI
+becomes a commodity, the differentiator is judgment about *when not to act*.
+
+**What "respectful copilot" looks like:**
+- **Optional, not forced** — AI is offered (a sidebar, overlay, collapsible panel,
+  inline suggestion), never shoved into the critical path. The user can ignore it
+  and still complete the task the normal way.
+- **Calm and peripheral** — it augments the current context instead of taking over
+  the screen; suggestions sit beside the work, not on top of it.
+- **User stays in control** — the human initiates or explicitly accepts; AI
+  proposes, the user disposes. Every AI action is previewable, reversible, and
+  attributable (see "Hidden AI", "Over-automation", "No AI undo" anti-patterns).
+- **Transparent** — clearly labeled as AI, honest about confidence and limits,
+  shows its sources/reasoning when it matters.
+
+```
+Autopilot (avoid)              Respectful copilot (prefer)
+─────────────────              ──────────────────────────
+Auto-rewrites your text        Suggests an edit you can accept/dismiss
+Modal hijacks the screen       Quiet panel beside your work
+Acts, then maybe tells you     Proposes, you confirm, then it acts
+"AI is doing X…" (opaque)      Shows what, why, and an undo
+```
+
+Apply this lens to every pattern below: chat, copilots, and agents should all
+default to *offered and reversible*, never *imposed and silent*.
+
+---
+
 ## Conversational / Chat UI
 
 ### Message Layout
@@ -452,6 +485,7 @@ Code query   → Syntax-highlighted block with copy button
 ## Sources
 
 - [Nielsen Norman Group: UX for AI](https://www.nngroup.com/articles/ai-ux/) — AI interaction research
+- [Nielsen Norman Group: State of UX](https://www.nngroup.com/articles/) — annual UX trend analysis (respectful-copilot framing)
 - [Google PAIR: People + AI Guidebook](https://pair.withgoogle.com/guidebook) — AI design patterns
 - [Apple: Human Interface Guidelines for Machine Learning](https://developer.apple.com/design/human-interface-guidelines/machine-learning)
 - [Microsoft: HAX Toolkit](https://www.microsoft.com/en-us/haxtoolkit/) — Human-AI interaction guidelines

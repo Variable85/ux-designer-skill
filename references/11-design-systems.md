@@ -84,6 +84,30 @@ Collection of **UI patterns**:
 
 Design tokens are the atomic values that define visual design decisions.
 
+### Tokens as the Universal Language
+
+By 2026 the leading framing is that design tokens are not just a theming
+convenience—they are the **infrastructure layer** that makes consistency possible
+across an expanding surface of platforms and modalities (web, iOS, Android, watch,
+TV, voice, in-car, AR). A token is a named, platform-agnostic decision (e.g.
+`color.action.primary`, `space.4`) that a build step (Style Dictionary, Tokens
+Studio) compiles into CSS custom properties, Swift, Kotlin, JSON, etc.
+
+```
+Single source of truth (tokens.json)
+        │  transform / build
+        ├──► CSS  --color-action-primary
+        ├──► iOS  Color.actionPrimary
+        ├──► Android  colorActionPrimary
+        └──► docs / Figma variables
+```
+
+- **One decision, many outputs** — change a token, every platform updates in sync
+- **Tiered structure** — primitive (raw values) → semantic (intent) → component
+- **Theming falls out for free** — light/dark, brand, density, high-contrast are
+  just alternate token sets resolved at the semantic layer
+- Tokens are the contract between design and engineering; treat them as versioned API
+
 ### Token Types
 
 ```css
@@ -155,6 +179,38 @@ Design tokens are the atomic values that define visual design decisions.
 --card-padding: var(--space-5);
 --card-radius: var(--radius-lg);
 ```
+
+### Variable Fonts
+
+A **variable font** packs an entire type family—every weight, width, and optical
+size—into a single file along continuous axes, replacing the old "load 6 static
+weight files" approach. This is now the default recommendation for design systems.
+
+```css
+@font-face {
+  font-family: 'InterVar';
+  src: url('/fonts/Inter.var.woff2') format('woff2-variations');
+  font-weight: 100 900;          /* full weight range in one file */
+  font-display: swap;
+}
+
+:root {
+  --font-family-base: 'InterVar', sans-serif;
+}
+
+/* Use any weight on the axis, not just preset steps */
+.heading { font-weight: 620; }
+/* Optical sizing axis tracks the rendered size automatically */
+body { font-optical-sizing: auto; }
+```
+
+**Why it matters:**
+- **Performance** — one HTTP request and ~one file instead of many static weights
+- **Responsive typography** — interpolate weight/width fluidly across breakpoints
+  and even animate them (respecting reduced-motion); great for fluid `clamp()` scales
+- **Design flexibility** — fine-grained control (e.g. weight 540) without new files
+- Expose axes as tokens (`--font-weight-*`) so the system stays the single source
+- Caveat: subset to needed glyphs/axes; a full variable font can be large
 
 ---
 
@@ -332,7 +388,7 @@ https://developer.apple.com/design/
 
 ---
 
-## React Component Libraries (2025)
+## React Component Libraries (2026)
 
 ### Untitled UI React
 
