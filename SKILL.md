@@ -1,33 +1,27 @@
 ---
 name: ux-designer
-description: Applies modern UX/UI best practices to interface design and review. Use for UI design and critique; accessibility audits (WCAG, EAA); microcopy; forms, navigation, and onboarding; internationalization and RTL; voice, multimodal, and AI interfaces; design systems; and frontend code review.
+description: UX/UI design principles for building and critiquing interfaces. Use for accessibility audits (WCAG, EAA), microcopy, forms, navigation, onboarding, internationalization and RTL, voice and AI interfaces, and design systems.
 ---
 
 # UX Designer Skill
 
-You are a UX design expert with comprehensive knowledge of modern user experience best practices (2026). Apply these principles when designing or reviewing interfaces.
+Apply the following UX/UI principles when designing or reviewing interfaces.
 
 ## When to Apply This Skill
 
 Use this skill when:
-- Designing new user interfaces or components
-- Reviewing existing UI/UX for improvements
-- Implementing accessibility features
-- Creating forms, navigation, or interactive elements
-- Advising on mobile-first design
+- Designing or reviewing user interfaces, components, and mobile-first layouts
+- Implementing accessibility features or auditing against WCAG 2.2 AA
+- Creating forms, navigation, search, and other interactive elements
 - Writing UI copy and microcopy
-- Planning user research activities
-- Building or maintaining design systems
-- Designing collaborative/multiplayer features (real-time editing, presence)
+- Planning user research, or building and maintaining design systems
+- Designing collaborative/multiplayer features (presence, real-time editing, sharing, permissions, version history)
 - Building canvas-based or whiteboard applications
-- Implementing sharing, permissions, or version control UX
 - Designing AI-powered interfaces (chat, copilots, agents, generative UI)
-- Evaluating designs for dark patterns and ethical compliance
+- Evaluating designs for dark patterns, ethical compliance, and user trust
 - Creating onboarding flows, activation funnels, and first-run experiences
 - Designing notification systems and attention management
-- Building dashboards, data visualizations, and analytics interfaces
-- Implementing search interfaces with autocomplete and filtering
-- Applying emotional design principles and building user trust
+- Building dashboards and data visualizations
 - Internationalizing/localizing UI or adding right-to-left (RTL) language support
 - Designing voice, multimodal, or cross-device input experiences
 
@@ -40,7 +34,7 @@ Use this skill when:
 4. **Maintain consistency** - Follow established patterns users expect
 5. **Design for accessibility** - Include all users from the start
 
-### Calm & Clarity Over Complexity (2026)
+### Calm & Clarity Over Complexity
 - **Cognitive clarity over sensory richness** - Calm, legible interfaces beat busy,
   flashy ones. Motion, color, and density should earn their place by aiding
   understanding, not by impressing.
@@ -59,91 +53,94 @@ Use this skill when:
 4. **Convenient** - Is it frictionless?
 5. **Pleasurable** - Is it delightful?
 
-## Quick Reference Checklist
+## Core Guidelines
 
 ### Before Designing
-- [ ] Understand user goals and pain points
-- [ ] Review existing patterns in the codebase
-- [ ] Consider accessibility requirements (WCAG 2.2 AA)
-- [ ] Define success metrics
+- Understand user goals and pain points
+- Review existing patterns in the codebase
+- Consider accessibility requirements (WCAG 2.2 AA)
+- Define success metrics
 
 ### Visual Design
-- [ ] Clear visual hierarchy (size, color, spacing)
-- [ ] Consistent typography (16px+ body, 1.3-1.6x heading scale)
-- [ ] Sufficient color contrast (4.5:1 for text)
-- [ ] Adequate whitespace and breathing room
+- One dominant element per screen — the primary action outranks all others in size and contrast
+- Consistent typography (16px+ body, 1.3-1.6x heading scale)
+- Sufficient color contrast (4.5:1 for text)
+- Spacing drawn from a single scale (4px or 8px base unit)
 
 ### Interaction Design
-- [ ] Touch targets minimum 44×44px (iOS) / 48×48dp (Android)
-- [ ] Important actions in thumb-friendly zones (bottom/center on mobile)
-- [ ] Clear feedback for all interactions (< 100ms response)
-- [ ] Smooth animations (300-500ms duration)
-- [ ] Support `prefers-reduced-motion`
+- Touch targets minimum 44×44px (iOS) / 48×48dp (Android)
+- Important actions in thumb-friendly zones (bottom/center on mobile)
+- Every interaction produces a visible response
+- Response appears within 100ms of input
+- Smooth animations (300-500ms duration)
+- Support `prefers-reduced-motion`
 
 ### Forms
-- [ ] Inline validation (on blur, not during typing)
-- [ ] Clear error messages near the field
-- [ ] Required fields marked with asterisk (*)
-- [ ] Logical field order and grouping
+- Inline validation (on blur, not during typing)
+- Clear error messages near the field
+- Required fields marked with asterisk (*)
+- Logical field order and grouping
 
 ### Navigation
-- [ ] Limited top-level items (7±2 rule)
-- [ ] Current location always visible
-- [ ] Mobile: bottom navigation preferred
-- [ ] Consistent navigation across pages
+- Limited top-level items (7±2 rule)
+- Current location always visible
+- Mobile: bottom navigation preferred
+- Consistent navigation across pages
 
 ### Accessibility
-- [ ] Keyboard navigable
-- [ ] Screen reader compatible
-- [ ] Color not sole conveyor of information
-- [ ] Focus states visible
-- [ ] Alt text for images
+- All interactive elements reachable and operable by keyboard
+- Every control has an accessible name and role exposed to screen readers
+- Color not sole conveyor of information
+- Focus states visible
+- Alt text for images
 
 ### Collaborative Features
-- [ ] Presence indicators (cursors, avatars, typing)
-- [ ] Clear conflict prevention/resolution
-- [ ] Offline state communication
-- [ ] Client-specific undo/redo
-- [ ] Permission levels clearly communicated
+- Presence indicators (cursors, avatars, typing)
+- Clear conflict prevention/resolution
+- Offline state communication
+- Client-specific undo/redo
+- Permission levels clearly communicated
 
 ### Canvas/Spatial Apps
-- [ ] Cursor-centered zoom (not screen center)
-- [ ] Smart guides and snapping with toggle
-- [ ] Minimap for large canvases
-- [ ] Full keyboard navigation support
-- [ ] Viewport culling for performance
+- Cursor-centered zoom (not screen center)
+- Smart guides and snapping with toggle
+- Minimap for large canvases
+- Full keyboard navigation support
+- Viewport culling for performance
 
 ### AI Interfaces
-- [ ] AI-generated content clearly labeled
-- [ ] Source attribution for AI claims
-- [ ] User feedback mechanism (thumbs up/down)
-- [ ] Stop/cancel generation control
-- [ ] Human override always available
+- AI-generated content clearly labeled
+- Source attribution for AI claims
+- User feedback mechanism (thumbs up/down)
+- Stop/cancel generation control
+- Human override always available
 
 ### Onboarding
-- [ ] First-run experience guides users to "aha moment"
-- [ ] Empty states provide clear next actions
-- [ ] Onboarding is skippable and won't re-show
-- [ ] Sign-up collects only essential fields
+- First-run experience guides users to "aha moment"
+- Empty states provide clear next actions
+- Onboarding is skippable and won't re-show
+- Sign-up collects only essential fields
 
 ### Notifications
-- [ ] Notification severity matches visual treatment
-- [ ] Push permission requested in context (not on first visit)
-- [ ] Users can control notification preferences per channel
-- [ ] Toasts auto-dismiss (4-8s) with action button option
+- Notification severity matches visual treatment
+- Push permission requested in context (not on first visit)
+- Users can control notification preferences per channel
+- Toasts auto-dismiss within 4-8s
+- Toasts carrying an undoable action expose that action as a button
 
 ### Ethical Design
-- [ ] Accept/reject buttons have equal visual prominence
-- [ ] No pre-checked optional consent boxes
-- [ ] Cancellation is as easy as subscription
-- [ ] No confirmshaming in decline copy
+- Accept/reject buttons have equal visual prominence
+- No pre-checked optional consent boxes
+- Cancellation is as easy as subscription
+- No confirmshaming in decline copy
 
 ### Internationalization
-- [ ] RTL-ready (logical CSS properties, layout verified in `dir="rtl"`)
-- [ ] Tolerant of ~30-40% text expansion (no fixed-width labels/buttons)
-- [ ] No text baked into images; all strings externalized
-- [ ] Locale-aware date/number/currency formatting (`Intl`); ICU plurals
-- [ ] Language switcher uses endonyms, not flags
+- RTL-ready (logical CSS properties, layout verified in `dir="rtl"`)
+- Tolerant of ~30-40% text expansion (no fixed-width labels/buttons)
+- No text baked into images; all strings externalized
+- Locale-aware date/number/currency formatting via `Intl`
+- Pluralization handled with ICU plural rules, not string concatenation
+- Language switcher uses endonyms, not flags
 
 ## Decision Trees
 
@@ -219,7 +216,7 @@ What needs the user's attention?
 - For internationalization, localization, and RTL design, see [references/23-internationalization.md](references/23-internationalization.md)
 - For voice, multimodal, and cross-device input patterns, see [references/24-voice-and-multimodal.md](references/24-voice-and-multimodal.md)
 
-## Key Numbers to Remember
+## Reference Values
 
 ### Layout & Typography
 
