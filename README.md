@@ -30,8 +30,8 @@ The skill is invocable by both user (`/ux-designer`) and Claude (auto-triggered 
 
 ```
 ux-designer/
-├── SKILL.md                              # Main skill definition (297 lines)
-└── references/                           # 24 detailed reference files (~10,700 lines)
+├── SKILL.md                              # Workflows, core rules, routing table
+└── references/                           # Detailed reference files (each opens with a TOC)
     ├── 01-core-principles.md             # Nielsen heuristics, Gestalt, UX hierarchy
     ├── 02-laws-of-ux.md                  # Fitts's, Hick's, Miller's, Jakob's, etc.
     ├── 03-accessibility.md               # WCAG 2.2 AA compliance
@@ -55,17 +55,19 @@ ux-designer/
     ├── 19-search-ux.md                   # Autocomplete, filters, results ranking
     ├── 20-emotional-design.md            # Trust, delight, brand personality
     ├── 21-data-tables.md                 # Sorting, pagination, bulk actions, inline edit
-    └── 22-performance-ux.md              # Skeletons, optimistic updates, CLS, lazy loading
+    ├── 22-performance-ux.md              # Skeletons, optimistic updates, CLS, lazy loading
+    ├── 23-internationalization.md        # i18n, RTL, Intl formatting, plurals
+    └── 24-voice-and-multimodal.md        # Voice, multimodal, cross-device input
 ```
 
 ## SKILL.md Highlights
 
-The main file (always loaded into context) includes:
+The main file (loaded when the skill triggers) includes:
 
-- **Quick reference checklists** for visual design, interaction, forms, navigation, accessibility, collaboration, canvas, AI, onboarding, notifications, and ethical design
-- **Decision trees** for choosing between modal/side panel/full page and notification types
-- **Key numbers** grouped by category (layout, interaction, collaboration, AI, engagement)
-- **23 anti-patterns** with links to the reference file that shows the correct approach
+- **Workflows** for reviewing/auditing a UI (render, extremes, severity-ranked findings) and for building UI (reuse, all states, semantics, verify)
+- **Generated-UI defaults to avoid** (common model-generated aesthetic tells)
+- **Core rules** per domain, and **decision trees** for modal/panel/page and notification types
+- **Reference values** with sources, a **routing table** saying when to load each reference file, and anti-patterns linked to their fixes
 
 Reference files are loaded on demand when the topic is relevant, keeping context usage efficient.
 
@@ -85,4 +87,4 @@ Reference files are loaded on demand when the topic is relevant, keeping context
 
 ## Sources
 
-The skill synthesizes guidance from 19 authoritative sources including Nielsen Norman Group, WCAG 2.2, Material Design, Apple HIG, Laws of UX, Google PAIR, Microsoft HAX Toolkit, Baymard Institute, The A11y Project, and web.dev.
+The skill synthesizes guidance from sources including Nielsen Norman Group, WCAG 2.2, Material Design, Apple HIG, Laws of UX, Google PAIR, Microsoft HAX Toolkit, Baymard Institute, The A11y Project, and web.dev.
