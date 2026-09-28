@@ -1,6 +1,6 @@
 ---
 name: ux-designer
-description: UX/UI design guidance for building, reviewing, and critiquing interfaces and frontend code. Use when designing screens or components, auditing usability or accessibility (WCAG 2.2, EAA), writing microcopy, or designing forms, navigation, search, tables, dashboards, onboarding, notifications, real-time collaboration, canvas/whiteboard apps, AI/chat interfaces, i18n/RTL, voice, or design systems.
+description: UX/UI design guidance for building, reviewing, and critiquing interfaces and frontend code. Use when designing screens or components, auditing usability or accessibility (WCAG 2.2, EAA), writing microcopy, or designing forms, navigation, search, tables, dashboards, onboarding, notifications, real-time collaboration, canvas/whiteboard apps, AI/chat interfaces, i18n/RTL, voice, design systems, or barcode/QR scanning and display.
 ---
 
 # UX Designer
@@ -131,6 +131,9 @@ Load the file when the task touches its topic. Each file opens with a table of c
 | Loading, skeletons, optimistic updates, Core Web Vitals | [references/22-performance-ux.md](references/22-performance-ux.md) |
 | Localization, RTL, `Intl`, plurals, text expansion | [references/23-internationalization.md](references/23-internationalization.md) |
 | Voice, multimodal, cross-device input | [references/24-voice-and-multimodal.md](references/24-voice-and-multimodal.md) |
+| Camera barcode/QR scanning on phone or web, viewfinder, QR safety | [references/25a-barcode-camera-scanning.md](references/25a-barcode-camera-scanning.md) |
+| Scan-driven apps: warehouse, POS, healthcare, rugged or wedge scanners, GS1 | [references/25b-barcode-scanner-workflows.md](references/25b-barcode-scanner-workflows.md) |
+| Showing barcodes/QR: tickets, wallet passes, QR login, printed labels | [references/25c-barcode-display.md](references/25c-barcode-display.md) |
 
 ## Reference values
 
@@ -150,6 +153,8 @@ Load the file when the task touches its topic. Each file opens with a table of c
 | Canvas | cursor updates 50–100ms, 60fps pan/zoom, 2–8px snap threshold, 10%–4000% zoom | Figma-class tools |
 | Avatar stack | 3–5 visible, then "+N" | |
 | AI response | first token < 1s, or show immediate progress | |
+| Displayed QR code | 4-module quiet zone; module ≥ 0.25 mm physical; error correction M by default | ISO/IEC 18004; IATA BCBP; DENSO WAVE |
+| QR size vs. distance | ≥ 2×2 cm, +1 cm per 10 cm of scan distance | NN/g heuristic |
 
 Numbers like conversion rates, NPS targets, and completion percentages depend on context. Don't quote benchmarks as universal facts. Recommend measuring against the product's own baseline.
 
@@ -173,6 +178,7 @@ Each one points to the reference file that covers the fix.
 - Notification carpet bombing, push permission on first visit → [17](references/17-notifications.md)
 - Hardcoded strings, fixed widths, LTR-only layout → [23](references/23-internationalization.md)
 - Voice-only flows, hidden mic, no recognition feedback → [24](references/24-voice-and-multimodal.md)
+- Scan-only flows with no manual entry, silent scan failures → [25a](references/25a-barcode-camera-scanning.md) / [25b](references/25b-barcode-scanner-workflows.md)
 
 ## Sources
 

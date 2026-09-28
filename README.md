@@ -18,6 +18,7 @@ Gives Claude deep knowledge of user experience design principles so it can:
 - Design onboarding, notifications, search, data tables, and dashboards
 - Internationalize UI and support right-to-left (RTL) languages
 - Design voice and multimodal interactions
+- Design barcode/QR scanning (camera and hardware scanners) and code display
 - Check compliance with the European Accessibility Act (EAA)
 
 ## Installation
@@ -67,7 +68,10 @@ ux-designer/
     ├── 21-data-tables.md                 # Sorting, pagination, bulk actions, inline edit
     ├── 22-performance-ux.md              # Skeletons, optimistic updates, CLS, lazy loading
     ├── 23-internationalization.md        # i18n, RTL, Intl formatting, plurals
-    └── 24-voice-and-multimodal.md        # Voice, multimodal, cross-device input
+    ├── 24-voice-and-multimodal.md        # Voice, multimodal, cross-device input
+    ├── 25a-barcode-camera-scanning.md    # Camera scanning on phone/web, QR safety
+    ├── 25b-barcode-scanner-workflows.md  # Scan-driven apps, wedge scanners, GS1 primer
+    └── 25c-barcode-display.md            # Showing codes on screens, wallet passes, print
 ```
 
 ## SKILL.md Highlights
@@ -94,7 +98,7 @@ Reference files are loaded on demand when the topic is relevant, keeping context
 | Modern | AI interfaces, ethical design, emotional design |
 | Flows | Onboarding, notifications, search |
 | Data | Data visualization, data tables, performance/loading |
-| Global & Input | Internationalization/RTL, voice and multimodal |
+| Global & Input | Internationalization/RTL, voice and multimodal, barcode scanning & display |
 
 ## Sources
 
